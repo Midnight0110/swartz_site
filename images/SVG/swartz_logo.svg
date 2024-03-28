@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 605 796">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 948.48px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+        font-family: Quillstone, Quillstone;
+      }
+
+      .cls-2 {
+        font-size: 948.49px;
+      }
+
+      .cls-3 {
+        fill: #7f3f98;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(-24.78 -528.06) rotate(-146.51)"><tspan x="0" y="0">e</tspan></text>
+  <rect class="cls-3" x="-9" y="-9" width="623" height="814"/>
+  <g>
+    <text class="cls-2" transform="translate(-27.86 -281) rotate(32.92)"><tspan x="0" y="0">e</tspan></text>
+    <text class="cls-1" transform="translate(646.47 -508.43) rotate(-146.51)"><tspan x="0" y="0">e</tspan></text>
+  </g>
+  <text class="cls-1" transform="translate(1286.47 -533.51) rotate(-146.51)"><tspan x="0" y="0">e</tspan></text>
+  <g>
+    <text class="cls-2" transform="translate(-36.86 512.03) rotate(32.92)"><tspan x="0" y="0">e</tspan></text>
+    <text class="cls-1" transform="translate(637.47 284.61) rotate(-146.51)"><tspan x="0" y="0">e</tspan></text>
+  </g>
+  <g>
+    <text class="cls-2" transform="translate(-690.92 500.15) rotate(32.92)"><tspan x="0" y="0">e</tspan></text>
+    <text class="cls-1" transform="translate(-16.59 272.73) rotate(-146.51)"><tspan x="0" y="0">e</tspan></text>
+  </g>
+</svg>

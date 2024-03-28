@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+html{
+    box-sizing: border-box;
+}
+    *{
+        box-sizing: inherit;
+    }
+
+    body {
+        color: #000000;
+        background-color: #ffd7ff7e;
+        max-width: 1200px;
+        margin: 0 auto;
+        
+    }
+    main{
+        background-color: #ffffff7e;
+    }
+
+/*----HEADERS----*/
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    color: #FFCEFF;
+    
+}
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3D003C;
+}
+h3{
+    font-size: small;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+    /*--------hero video--------*/
+video {
+     width: 100%;
+     min-height: 100%;
+    position: relative;
+    overflow: hidden;
+     top: 0;
+    left: 0;
+    object-fit: contain;
+    display: block;
+}
+.header-text {
+    position: absolute;
+    color: #FFCEFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    transform: translateY(-5rem);
+    top: 500px;
+    bottom: 500px;
+    left: 0;
+    right: 0;
+}
+.header-text h1 {
+    font-weight: 400;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.header-text span {
+    display: block;
+    font-weight: 900;
+    font-size: 6rem;
+}
+
+    /*------NAV styles-------*/
+.nav_bar{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    background-color: #3D003C;
+    padding: 1.5em;
+    margin: 0;
+}
+
+.nav_bar a{
+    color: #ebe9e9;
+    padding: 60px 40px;
+    text-decoration: none;
+}
+
+.nav_bar a:hover{
+background-color: #ebe9e9;
+color: #3D003C;
+}
+
+/*-----Logo------*/
+
+
+
+/*-----LIST------*/
+li{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+
+/*------INDEX GRID------*/
+#index_container{
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+    'welcome welcome welcome'
+    'intro intro intro'
+    'about me me'
+    'some_work some_work some_work'
+    'hlight2 hlight1 hlight3'
+    ;
+}
+
+#welcome{
+    grid-area: welcome;
+    text-align: center;
+    font-size: 35px;
+}
+#intro{
+    grid-area: intro;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+#about{
+    grid-area: about;
+    text-align: center;
+    font-size: 20px;
+}
+#me{
+    grid-area: me;
+    text-align: justify;
+    font-size: 15px;
+    padding-right: 25px;
+}
+#some_work{
+    grid-area: some_work;
+    text-align: center;
+    font-size: 20px;
+}
+.hlight1{
+    grid-area: hlight1;
+ 
+}
+.hlight2{
+    grid-area: hlight2;
+    padding-left: 25px;
+}
+.hlight3{
+    grid-area: hlight3;
+    padding-right: 25px;
+}
+
+/*-----GRID GALLERY----*/
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+}
+.img{
+    max-width: 100%;
+}
+/*.gallery{
+    position: relative;
+    width: 50%;
+}
+.img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #3D003C;
+}
+.gallery:hover .overlay{
+    opacity: 1;
+}
+.text{
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+*/
+.video_gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 5px;
+}
+.video{
+    max-width: 100%;
+}
+
+.photo_gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+}
+p{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*-----FOOTER------*/
+footer{
+    background-color: #FFCEFF;
+}
+footer p{
+    text-align: center;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+footer img{
+    align-items: center;
+    margin-left: 575px;
+    width: 30px
+}
+
+/*-----IMAGES-----*/
+img{
+    max-width: 100%;
+}
