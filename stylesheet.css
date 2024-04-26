@@ -14,8 +14,21 @@ html{
         margin: 0 auto;
         
     }
+    .dark-mode:not(footer){
+        background-color: #000000;
+        color: #ebe9e9;
+    }
+    .dark-mode h1{
+        color: #FFCEFF;
+    }
+    .dark-mode h2{
+        color: #FFCEFF;
+    }
     main{
-        background-color: #ffffff7e;
+        background-color: white;
+    }
+    .dark-mode main{
+        background-color: #000000;
     }
 
 /*----HEADERS----*/
@@ -35,6 +48,7 @@ h3{
     text-align: center;
     padding-top: 15px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #000000;
 }
 
     /*--------hero video--------*/
@@ -76,6 +90,7 @@ video {
     /*------NAV styles-------*/
 .nav_bar{
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     list-style: none;
     background-color: #3D003C;
@@ -94,7 +109,67 @@ background-color: #ffffff7e;
 color: #3D003C;
 }
 
-/*-----Logo------*/
+
+/*--------FORM------*/
+#form{
+    max-width: 1200px;
+    background-color: rgba(255, 240, 245, 0.5);
+    color: black;
+    border-style: none;
+    margin: 15px 20px 20px 15px;
+    padding: 20px;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+input, textarea{
+    
+    flex: 1 1 20em;
+}
+
+textarea{
+    font-family: inherit;
+}
+
+input{
+    margin: 10px;
+    
+}
+
+
+input[type=submit], input[type=reset]{
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 16px 32px;
+    margin: 4px 2px;
+    color: white;
+    background-color: #3D003C;
+}
+
+input[type=submit]:hover{
+    background-color: #FFCEFF;
+    color: black;
+}
+
+input[type=reset]:hover{
+    background-color: #FFCEFF;
+    color: black;
+}
+
+input[type=tel]:focus{
+    background-color: #FFCEFF;
+    color: black;
+}
+
+input[type=email]:focus{
+    background-color: #FFCEFF;
+    color: black;
+}
+input[type=text]:focus{
+    background-color: #FFCEFF;
+    color: black;
+}
 
 
 
@@ -150,15 +225,18 @@ li{
 }
 .hlight1{
     grid-area: hlight1;
+    
  
 }
 .hlight2{
     grid-area: hlight2;
     padding-left: 25px;
+    
 }
 .hlight3{
     grid-area: hlight3;
     padding-right: 25px;
+   
 }
 
 /*------ABOUT ME GRID---------*/
@@ -216,9 +294,9 @@ li{
 .video_gallery{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
    
 }
 .video{
@@ -250,6 +328,7 @@ footer p{
     padding-bottom: 15px;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
+    margin: 0;
 }
 
 
@@ -265,20 +344,197 @@ footer p{
     margin: 0px 10px 0px 10px;
 }
 
-/*------BUTTON--------*/
+
+/*------BUTTONS--------*/
 .button{
     background-color: #3D003C;
     border: none;
     color: #ebe9e9;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
     font-size: 18px;
     margin: 6px 3px;
     padding: 20px 40px;
     cursor: pointer;
 }
+
+#myBtn{
+    display: none;
+    position: relative;
+    bottom: 20px;
+    left: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #3D003C;
+    color: #ebe9e9;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+#myBtn:hover{
+background-color: #FFCEFF;
+color: #000000;
+}
+#dark_mode{
+    background-color: #3D003C; 
+    border: none;   
+    margin: auto;
+    padding: 20px;
+    cursor: pointer;
+}
+#myButn{
+    display: none;
+    position: fixed;
+    color: #FFCEFF;
+    background-color: #3D003C;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
 /*-----IMAGES-----*/
 img{
     max-width: 100%;
 }
+
+
+
+/*--------MEDIA QUERIES--------*/
+/*-------INDEX-------*/
+@media screen and (max-width: 1200px){
+    #index_container{
+        display: grid;
+        gap: 25px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: 
+        'welcome welcome welcome'
+        'intro intro intro'
+        'about me me'
+        'some_work some_work some_work'
+        'hlight2 hlight1 hlight3'
+        ;
+    }
+    
+}
+
+@media screen and (max-width: 800px){
+    #index_container{
+        display: grid;
+        gap: 25px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(7, auto);
+        grid-template-areas: 
+        'welcome welcome'
+        'intro intro'
+        'about me'
+        'me'
+        'some_work some_work'
+        'hlight2 hlight1'
+        'hlight3'
+        ;
+    }
+    .nav_bar a{
+        padding: 80px 30px;
+        
+    }
+    
+    .header-text{
+        font-size: 4rem;
+        transform: translateY(-4em);
+        right: 150px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #index_container{
+        display: grid;
+        gap: 25px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, auto);
+        grid-template-areas: 
+        'welcome'
+        'intro'
+        'about'
+        'me'
+        'some_work'
+        'hlight2'
+        'hlight1'
+        'hlight3'
+        ;
+
+        justify-content: center;
+
+    }
+    .nav_bar a{
+        padding: 80px 30px;
+        
+    }
+
+    .header-text h1{
+        font-size: 20px;
+        transform: translateY(-4em);
+        right: 150px;
+        padding: 15px;
+    
+    }
+    .header-text span{
+        font-size: 60px;
+        padding: 15px;
+    }
+
+}
+
+
+/*-----------ABOUT ME--------*/
+@media screen and (max-width:1200px) {
+    
+#about_me_grid{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: 
+    'pic about about'
+    'pic facts facts'
+    'pic inspire inspire';
+}
+}
+
+@media screen and (max-width:800px) {
+    
+#about_me_grid{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    'pic pic'
+    'about about'
+    'facts facts'
+    'inspire inspire';
+}
+    
+}
+
+@media screen and (max-width:600px) {
+    
+#about_me_grid{
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    'pic'
+    'about'
+    'facts'
+    'inspire';
+}
+}
+
